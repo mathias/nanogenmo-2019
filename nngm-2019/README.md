@@ -8,11 +8,14 @@ $ wc -c pwReplace.rb
 254 pwReplace.rb
 ```
 
-The Gutenberg text (which downloads as 205-0.txt) must be piped in:
+Despite being in Ruby and not having much code golfing applied to it. Enumerable methods help out here.
+
+The Gutenberg text (which download in text as `205-0.txt`) must be piped in:
 
 ```
 $ cat 205-0.txt | ruby pwReplace.rb > output.txt
 ```
+
 The output is checked in at `output.txt` in this directory. It is plenty long for our minimum of 50K words:
 
 ```
