@@ -16,6 +16,17 @@ The Gutenberg text (which download in text as `205-0.txt`) must be piped in:
 $ cat 205-0.txt | ruby pwReplace.rb > output.txt
 ```
 
+When the script runs, it creates a hash where every word is a key in the hash, and every word that follows that word in the original text is in an array under that key. To generate a new text, it loops over the words from the original text, but picks a following word at random from the array for that word. Here's what the array of words and their following words looks like when it is running:
+
+```ruby
+{
+ "walden"=>["economy", "economy", "pond,", "pond", "pond", "pond,", "nymphs", "pond", "road,", "pond", "pond,", "pond", "is", "is", "water", "pond", "pond", "at", "never", "pickerel,", "is", "by", "shore,", "wears", "even.", "has", "and", "are", "pond", "is", "i", "froze", "vale,", "woods;—cato,", "woods", "woods.", "pond", "road,", "vale", "wood,", "when", "once", "wood;", "water.", "all", "road,", "pond,", "reached", "has", "pond", "had", "ice,", "which", "water", "water", "that", "increases", "on", "was", "is", "was", "appeared", "september", "ice."],
+ "economy"=>["where", "when", "is", "managed", "of", "to", "and"],
+ "lived,"=>["and", "and", "i", "perhaps", "to"],
+ ...
+}
+```
+
 The output is checked in at `output.txt` in this directory. It is plenty long for our minimum of 50K words:
 
 ```
